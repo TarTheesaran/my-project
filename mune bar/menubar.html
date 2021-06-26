@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Responsive Navigation Menu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Mitr' rel='stylesheet'>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            Pettinee
+        </div>
+        <input type="checkbox" id="click">
+        <label for="click" class="menu-btn">
+         <i class="fas fa-bars"></i>
+         </label>
+        <ul>
+            <li><a id="menu-schedule" class="active" href="#" onclick="selectPage('menu-schedule');">ตารางงาน</a></li>
+            <li><a id="menu-chat" class="aa" href="#" onclick="selectPage('menu-chat');">จัดการแชท</a></li>
+            <li><a id="menu-payment" class="aa" href="#" onclick="selectPage('menu-payment');">การจ่ายเงิน</a></li>
+        </ul>
+    </nav>
+    <div id="page-schedule" class="content" style="display: block;">
+        <div>
+            Schedule
+        </div>
+    </div>
+    <div id="page-chat" class="content" style="display: none;">
+        <div>
+            Chat
+        </div>
+    </div>
+    <div id="page-payment" class="content" style="display: none;">
+        <div>
+            Payment
+        </div>
+    </div>
+</body>
+<script>
+    var page_schedule = document.getElementById("page-schedule");
+    var page_chat = document.getElementById("page-chat");
+    var page_payment = document.getElementById("page-payment");
+    var menu_schedule = document.getElementById("menu-schedule");
+    var menu_chat = document.getElementById("menu-chat");
+    var menu_payment = document.getElementById("menu-payment");
+
+    function selectPage(menu_id) {
+        if (menu_id == 'menu-schedule') {
+            menu_schedule.className = "active";
+            menu_chat.className = "";
+            menu_payment.className = "";
+            page_schedule.style.display = "block";
+            page_chat.style.display = "none";
+            page_payment.style.display = "none";
+        } else if (menu_id == 'menu-chat') {
+            menu_schedule.className = "";
+            menu_chat.className = "active";
+            menu_payment.className = "";
+            page_schedule.style.display = "none";
+            page_chat.style.display = "block";
+            page_payment.style.display = "none";
+        } else if (menu_id == 'menu-payment') {
+            menu_schedule.className = "";
+            menu_chat.className = "";
+            menu_payment.className = "active";
+            page_schedule.style.display = "none";
+            page_chat.style.display = "none";
+            page_payment.style.display = "block";
+        }
+    }
+</script>
+
+</html>
