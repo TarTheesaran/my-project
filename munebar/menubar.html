@@ -9,10 +9,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=Mitr' rel='stylesheet'>
-    <link rel="icon" type="image/png" href="/image/PettineeIcon.png" />
+    <link rel="icon" type="image/png" href="./image/PettineeIcon.png" />
 </head>
 
 <body>
+    <!-- เมนู -->
     <nav>
         <div class="logo">
             <p>
@@ -28,26 +29,44 @@
          <i class="fas fa-bars"></i>
          </label>
         <ul>
-            <li><a id="menu-schedule" class="active" href="#" onclick="selectPage('menu-schedule');">ตารางงาน</a></li>
-            <li><a id="menu-chat" class="aa" href="#" onclick="selectPage('menu-chat');">จัดการแชท</a></li>
+            <li><a id="menu-schedule" class="aa" href="#" onclick="selectPage('menu-schedule');">ตารางงาน</a></li>
+            <li><a id="menu-chat" class="active" href="#" onclick="selectPage('menu-chat');">จัดการแชท</a></li>
             <li><a id="menu-payment" class="aa" href="#" onclick="selectPage('menu-payment');">การจ่ายเงิน</a></li>
         </ul>
     </nav>
-    <div id="page-schedule" class="content" style="display: block;">
-        <div>
-            Schedule
+    <!-- ตารางงาน -->
+    <div id="page-schedule" class="pageblock" style="display: none;">
+
+    </div>
+    <!-- แชท -->
+    <div id="page-chat" class="chatmanagerblock" style="display: grid;">
+        <div class="customerblock ">
+            <h1>
+                รายการ
+            </h1>
+        </div>
+        <div class="chatblock">
+            <h1>
+                แชท
+            </h1>
+            <div class="detailbutton">
+                <button>ดูข้อมูล</button>
+            </div>
+
+        </div>
+        <div class="detailblock">
+            <h1>
+                ข้อมูล
+            </h1>
         </div>
     </div>
-    <div id="page-chat" class="content" style="display: none;">
-        <div>
-            Chat
-        </div>
-    </div>
+    <!-- จ่ายเงิน -->
     <div id="page-payment" class="content" style="display: none;">
-        <div>
+        <div class="paymentblock">
             Payment
         </div>
     </div>
+
 </body>
 <script>
     var page_schedule = document.getElementById("page-schedule");
@@ -62,7 +81,7 @@
             menu_schedule.className = "active";
             menu_chat.className = "";
             menu_payment.className = "";
-            page_schedule.style.display = "block";
+            page_schedule.style.display = "grid";
             page_chat.style.display = "none";
             page_payment.style.display = "none";
         } else if (menu_id == 'menu-chat') {
@@ -70,7 +89,7 @@
             menu_chat.className = "active";
             menu_payment.className = "";
             page_schedule.style.display = "none";
-            page_chat.style.display = "block";
+            page_chat.style.display = "grid";
             page_payment.style.display = "none";
         } else if (menu_id == 'menu-payment') {
             menu_schedule.className = "";
@@ -78,7 +97,7 @@
             menu_payment.className = "active";
             page_schedule.style.display = "none";
             page_chat.style.display = "none";
-            page_payment.style.display = "block";
+            page_payment.style.display = "grid";
         }
         document.getElementById("click").checked = false;
 
