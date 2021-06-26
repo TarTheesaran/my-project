@@ -181,7 +181,7 @@ h1 {
 }
 
 .detailbutton {
-    display: block;
+    display: none;
     position: relative;
     left: 280px;
     top: -25px;
@@ -196,9 +196,6 @@ h1 {
     }
     .detailbutton {
         display: block;
-        position: absolute;
-        left: -100px;
-        top: 150px;
     }
 }
 
