@@ -21,10 +21,9 @@
                 <span class="namebrand">Pettinee</span>
             </p>
 
-
         </div>
-        <input type="checkbox" id="click">
-        <label for="click" class="menu-btn">
+        <input type="checkbox" id="clickmenu">
+        <label for="clickmenu" class="menu-btn">
          <i class="fas fa-bars"></i>
          </label>
         <ul>
@@ -33,6 +32,7 @@
             <li><a id="menu-payment" class="aa" href="#" onclick="selectPage('menu-payment');">การจ่ายเงิน</a></li>
         </ul>
     </nav>
+    <input type="checkbox" id="detailclick" style="display: none;">
     <!-- ตารางงาน -->
     <div id="page-schedule" class="pageblock" style="display: none;">
 
@@ -48,15 +48,20 @@
             <h1>
                 แชท
             </h1>
-            <div class="detailbutton">
-                <button>ดูข้อมูล</button>
-            </div>
-
+            <label for="detailclick" class=" detail-btn onchat-btn">
+                    ดูข้อมูล
+            </label>
         </div>
         <div class="detailblock">
             <h1>
                 ข้อมูล
             </h1>
+            <label for="detailclick" class="detail-btn ondetail-btn">
+                X
+            </label>
+            <div style="margin:30px;">
+                สวัสดี
+            </div>
         </div>
     </div>
     <!-- จ่ายเงิน -->
