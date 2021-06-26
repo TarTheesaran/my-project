@@ -6,6 +6,10 @@
     font-family: 'Kanit', sans-serif;
 }
 
+.menuicon {
+    z-index: 80;
+}
+
 .logopage {
     width: 60px;
     filter: brightness(1000%);
@@ -21,8 +25,6 @@
 
 nav {
     display: flex;
-    position: fixed;
-    top: 0;
     height: 80px;
     width: 100%;
     background: #0984e3;
@@ -154,17 +156,18 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: start;
+    z-index: -1;
+    background-attachment: fixed;
 }
 
 .chatmanagerblock {
     display: grid;
-    z-index: -1;
     margin: auto 16px 24px;
     max-width: 3000px;
     grid-template-columns: 320px 370px 250px;
     grid-gap: 20px;
     padding-top: 20px;
-    margin-top: 80px;
+    z-index: 0;
 }
 
 .chatmanagerblock>div {
@@ -231,7 +234,7 @@ h1 {
         top: 200%;
         left: 0;
         background: #111;
-        height: 110%;
+        height: 100%;
         width: 100%;
         text-align: center;
         display: block;
@@ -241,7 +244,7 @@ h1 {
         top: 4px;
     }
     .chatmanagerblock>.detailblock {
-        height: 110%;
+        height: 100%;
     }
     .chatmanagerblock {
         grid-template-columns: 320px 370px;
