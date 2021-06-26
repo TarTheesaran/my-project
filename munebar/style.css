@@ -8,7 +8,7 @@
 }
 
 .logopage {
-    margin-top: 6px;
+    /* margin-top: px; */
     width: 60px;
     filter: brightness(1000%);
 }
@@ -16,7 +16,7 @@
 .namebrand {
     position: absolute;
     margin-left: 15px;
-    margin-top: 4px;
+    margin-top: -2px;
     font-size: 40px;
     font-weight: 600;
 }
@@ -25,7 +25,7 @@ nav {
     display: flex;
     height: 80px;
     width: 100%;
-    background: #30a9e6;
+    background: #0984e3;
     align-items: center;
     justify-content: space-between;
     padding: 0 50px 0 100px;
@@ -123,6 +123,18 @@ input[type="checkbox"] {
     nav ul li a:hover {
         background: none;
         color: cyan;
+    }
+}
+
+@media (max-width: 370px) {
+    nav {
+        height: 60px;
+    }
+    .namebrand {
+        display: none;
+    }
+    .logopage {
+        width: 40px;
     }
 }
 
