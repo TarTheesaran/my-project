@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal - www.codingnepalweb.com -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pettinee Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="icon" type="image/png" href="./image/PettineeIcon.png" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav>
+            <input type="checkbox" id="show-menu">
+            <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
+            <div class="content">
+                <div class="logo">
+                    <img src="./image/PettineeIcon.png" class="logopage" alt="">
+                    <a href="#">Pettinee</a>
+                </div>
+                <ul class="links">
+                    <!-- เก็บไว้เผื่ออนาคตทำ submenu
+                        <li>
+                        <a href="#" class="desktop-link">Services</a>
+                        <input type="checkbox" id="show-services">
+                        <label for="show-services">Services</label>
+                        <ul>
+                            <li><a href="#">Drop Menu 1</a></li>
+                            <li>
+                                <a href="#" class="desktop-link">More Items</a>
+                                <input type="checkbox" id="show-items">
+                                <label for="show-items">More Items</label>
+                                <ul>
+                                    <li><a href="#">Sub Menu 1</a></li>
+                                    <li><a href="#">Sub Menu 2</a></li>
+                                    <li><a href="#">Sub Menu 3</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li> -->
+                    <li><a id="menu-schedule" class="" href="#" onclick="selectPage('menu-schedule');">ตารางงาน</a></li>
+                    <li><a id="menu-chat" class="active" href="#" onclick="selectPage('menu-chat');">จัดการแชท</a></li>
+                    <li><a id="menu-payment" class="" href="#" onclick="selectPage('menu-payment');">การจ่ายเงิน</a></li>
+
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <input type="checkbox" id="detailclick" style="display: none;">
+    <!-- mainpage -->
+    <div class="mainpage">
+        <!-- ตารางงาน -->
+        <div id="page-schedule" class="pageblock" style="display: none;">
+
+        </div>
+        <!-- แชท -->
+        <div id="page-chat" class="chatmanagerblock" style="display: grid;">
+            <div class="customerblock ">
+                <h1>
+                    รายการ
+                </h1>
+            </div>
+            <div class="chatblock">
+                <div class="headerchatblock">
+                    <h1>
+                        แชท
+                    </h1>
+                    <label for="detailclick" class=" detail-btn onchat-btn">
+                        ดูข้อมูล
+                    </label>
+
+
+                </div>
+
+            </div>
+            <div class="detailblock">
+                <h1>
+                    ข้อมูล
+                </h1>
+                <label for="detailclick" class="detail-btn ondetail-btn">
+                    X
+                </label>
+                <div style="margin:30px;">
+                    สวัสดี
+                </div>
+                <div style="margin:30px;">
+                    สวัสดี
+                </div>
+                <div style="margin:30px;">
+                    สวัสดี
+                </div>
+                <div style="margin:30px;">
+                    สวัสดี
+                </div>
+                <div style="margin:30px;">
+                    สวัสดี
+                </div>
+
+            </div>
+        </div>
+        <!-- จ่ายเงิน -->
+        <div id="page-payment" class="content" style="display: none;">
+            <div class="paymentblock">
+                Payment
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    var page_schedule = document.getElementById("page-schedule");
+    var page_chat = document.getElementById("page-chat");
+    var page_payment = document.getElementById("page-payment");
+    var menu_schedule = document.getElementById("menu-schedule");
+    var menu_chat = document.getElementById("menu-chat");
+    var menu_payment = document.getElementById("menu-payment");
+
+    function selectPage(menu_id) {
+        if (menu_id == 'menu-schedule') {
+            menu_schedule.className = "active";
+            menu_chat.className = "";
+            menu_payment.className = "";
+            page_schedule.style.display = "grid";
+            page_chat.style.display = "none";
+            page_payment.style.display = "none";
+        } else if (menu_id == 'menu-chat') {
+            menu_schedule.className = "";
+            menu_chat.className = "active";
+            menu_payment.className = "";
+            page_schedule.style.display = "none";
+            page_chat.style.display = "grid";
+            page_payment.style.display = "none";
+        } else if (menu_id == 'menu-payment') {
+            menu_schedule.className = "";
+            menu_chat.className = "";
+            menu_payment.className = "active";
+            page_schedule.style.display = "none";
+            page_chat.style.display = "none";
+            page_payment.style.display = "grid";
+        }
+        document.getElementById("show-menu").checked = false;
+
+    }
+</script>
+
+</html>
