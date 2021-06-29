@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="icon" type="image/png" href="./image/PettineeIcon.png" />
+    <!-- ./image/PettineeIcon.png -->
 </head>
 
 <body>
@@ -20,7 +21,8 @@
             <div class="content">
                 <div class="logo">
                     <img src="./image/PettineeIcon.png" class="logopage" alt="">
-                    <a href="#">Pettinee</a>
+                    <a href="#">Unknow</a>
+                    <!-- <a href="#">Pettinee</a> -->
                 </div>
                 <ul class="links">
                     <!-- เก็บไว้เผื่ออนาคตทำ submenu
@@ -51,6 +53,7 @@
         </nav>
     </div>
     <input type="checkbox" id="detailclick" style="display: none;">
+    <input type="checkbox" id="chatclick" style="display: none;">
     <!-- mainpage -->
     <div class="mainpage">
         <!-- ตารางงาน -->
@@ -60,9 +63,27 @@
         <!-- แชท -->
         <div id="page-chat" class="chatmanagerblock" style="display: grid;">
             <div class="customerblock ">
-                <h1>
-                    รายการ
-                </h1>
+                <div>
+                    <h1>
+                        รายการ
+                    </h1>
+                </div>
+                <div class="customerlistblock">
+                    <label for="chatclick" class="customercard" onclick="">
+                            <img src="./image/PettineeIcon.png" width="80" height="80" alt="">
+                            <div>
+                                <p>
+                                    Case ID : 135047954
+                                </p>
+                                <p>
+                                    Name : นายธีร์สรัล ทัพธานี
+                                </p>
+                                <p>
+                                    เวลาจอง : 13.00น.- 16.00น.
+                                </p>
+                            </div>
+                    </label>
+                </div>
             </div>
             <div class="chatblock">
                 <div class="headerchatblock">
@@ -71,6 +92,9 @@
                     </h1>
                     <label for="detailclick" class=" detail-btn onchat-btn">
                         ดูข้อมูล
+                    </label>
+                    <label for="chatclick" class="chat-close-btn">
+                        X
                     </label>
 
 
@@ -84,28 +108,25 @@
                 <label for="detailclick" class="detail-btn ondetail-btn">
                     X
                 </label>
-                <div style="margin:30px;">
-                    สวัสดี
+                <div class="detail">
+
+                    <div style="margin:30px; font-size: 15px;">
+                        วันหนึ่งมีหมาจิ้งจอกตัวหนึ่งมองเห็นพวงองุ่นสุกห้อยระย้าลงมาจากเถาที่เลื้อยพันไปตามกิ่งก้านของต้นไม้ องุ่นเหล่านั้นดูฉ่ำไปด้วยน้ำ เจ้าหมาจิ้งจอกมองจนน้ำลายสอ อยากลิ้มลององุ่นยิ่งนัก พวงองุ่นเหล่านั้นอยู่บนกิ่งไม้สูง ซึ่งเจ้าหมาจิ้งจอกจำต้องกระโดดเพื่อคว้ามาให้ได้
+                        กระโดดครั้งแรก มันพลาดพวงองุ่นไปหลายช่วงตัว มันจึงถอยไปตั้งหลักเล็กน้อย ก่อนจะกระโจนเข้าใส่อีกครั้งเพียงเพื่อคว้าน้ำเหลวเช่นเคย มันลองแล้วลองเล่าอีกหลายรอบแต่ก็ไร้ความหมาย ในที่สุดมันจึงนั่งลงและมองพวงองุ่นด้วยสายตารังเกียจเดียดฉันท์
+                        "ข้าช่างโง่อะไรเช่นนี้" มันเอ่ยขึ้น "นี่ข้าดิ้นรนเพื่อจะคว้าพวงองุ่นเปรี้ยวๆ ที่ไม่คุ่มค่าพอจะไขว่คว้ามาหรอกหรือนี่" แล้วมันก็เดินจากไปด้วยท่าทีเหยียดหยาม :: นิทานเรื่องนี้สอนให้รู้ว่า :: คนมากมายพร้อมจะเสแสร้งดูถูกเหยียดหยามต่อสิ่งที่ไกลเกินเอื้อม
+                        :: พุทธภาษิต :: ตเมว วาจํ ภาเสยฺย ยายตฺตานํ น ตาปเย ปเร จ น วิหึเสยฺย สา เว วาจา สุภาสิตา. บุคคลพึงกล่าววาจาที่ไม่เป็นเหตุยังตนให้เดือดร้อน และไม่เป็นเหตุเบียดเบียนผู้อื่น, วาจานั้นแล เป็นสุภาษิต. (วงฺคีสเถร) ขุ. สุ. ๒๕/ ๔๑๑.
+                    </div>
                 </div>
-                <div style="margin:30px;">
-                    สวัสดี
-                </div>
-                <div style="margin:30px;">
-                    สวัสดี
-                </div>
-                <div style="margin:30px;">
-                    สวัสดี
-                </div>
-                <div style="margin:30px;">
-                    สวัสดี
-                </div>
+
 
             </div>
         </div>
         <!-- จ่ายเงิน -->
         <div id="page-payment" class="content" style="display: none;">
             <div class="paymentblock">
-                Payment
+                <div>
+
+                </div>
             </div>
         </div>
     </div>

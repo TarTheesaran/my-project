@@ -298,7 +298,7 @@ body {
     background-color: rgba(255, 255, 255, 0.8);
     font-size: 30px;
     background: whitesmoke;
-    height: 400px;
+    height: 500px;
     width: 100%;
 }
 
@@ -352,6 +352,13 @@ h1 {
     padding-right: 10px;
 }
 
+.detail {
+    margin-top: 30px;
+    height: 400px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
 @media (max-width: 980px) {
     #detailclick:checked~div .detail-btn {
         /* do something with buttob*/
@@ -363,13 +370,11 @@ h1 {
         top: 200%;
         left: 50%;
         transform: translate(-50%, 0);
-        height: 400px;
+        min-height: 80vh;
+        max-height: 300px;
         width: 300px !important;
-        text-align: center;
         transition: all 0.3s ease;
         border-style: solid;
-        overflow-y: scroll;
-        overflow-x: hidden;
     }
     #detailclick:checked~div .detailblock {
         top: 80px;
@@ -383,14 +388,39 @@ h1 {
     .detail-btn {
         display: block;
     }
+    .detail {
+        margin-top: 15px;
+        height: calc(70vh - 60px);
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+}
+
+.chat-close-btn {
+    display: none;
+    line-height: 30px;
+    margin: 20px;
+    width: 50px;
 }
 
 @media (max-width: 710px) {
     .chatblock {
-        display: none;
+        display: block;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh !important;
+        transition: all 0.3s ease;
+    }
+    #chatclick:checked~div .chatblock {
+        left: 0;
     }
     .chatmanagerblock {
         grid-template-columns: 320px;
+    }
+    .chat-close-btn {
+        display: block;
     }
 }
 
@@ -401,4 +431,27 @@ h1 {
     .customerblock {
         padding-right: 20px;
     }
+}
+
+.customercard {
+    display: grid;
+    width: 270px;
+    height: fit-content;
+    grid-template-columns: 20% 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    font-size: 14px;
+    gap: 40px;
+    background: rgb(185, 226, 251);
+}
+
+.customerlistblock {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 400px;
+    gap: 9px;
 }
